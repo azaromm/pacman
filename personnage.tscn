@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://bmfy2ys2sdbtw"]
+
+[ext_resource type="Script" uid="uid://3kgjm88m4yk" path="res://personnage.gd" id="1_a2nqg"]
+[ext_resource type="Texture2D" uid="uid://mlj317f68cg" path="res://images/tahm pixel.png" id="2_2y57b"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_a2nqg"]
+radius = 37.0
+height = 80.0
+
+[node name="Personnage" type="CharacterBody2D" unique_id=2050269520]
+script = ExtResource("1_a2nqg")
+
+[node name="Image" type="TextureRect" parent="." unique_id=23881324 node_paths=PackedStringArray("shortcut_context")]
+offset_right = 500.0
+offset_bottom = 500.0
+scale = Vector2(0.2, 0.2)
+shortcut_context = NodePath("..")
+texture = ExtResource("2_2y57b")
+
+[node name="Hitbox" type="CollisionShape2D" parent="." unique_id=579989062]
+position = Vector2(50, 50)
+shape = SubResource("CapsuleShape2D_a2nqg")
